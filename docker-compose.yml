@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    restart: always
+    container_name: vitaglot-web
+    networks:
+      - credpet_default
+
+networks:
+  credpet_default:
+    external: true
